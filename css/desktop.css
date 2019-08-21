@@ -1,0 +1,88 @@
+#nav-menu {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#projects {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project {
+  position: relative;
+  color: white;
+  width: 40vw;
+  display: flex;
+}
+
+.project-item {
+  
+}
+
+.project-img {
+  width: 40vw;
+  margin: 4rem 3rem;
+}
+
+main, .project:hover > section.project-info > * {
+  display: block;
+}
+
+.project-info > * {
+  display: none;
+}
+
+#projects section.project-info {
+  position: absolute;
+  bottom: 70px;
+  right: -47px;
+  background-color: black;
+  height: 30%;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+#projects section.project-info {
+  /* display: none; */
+}
+
+.project-info > h1 {
+  margin-top: 14%;
+  color: white;
+  font-weight: bold;
+}
+
+.project-info > * {
+  margin-top: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+.project-heading, .info {
+  align-self: flex-start;
+  margin-left: 10%;
+}
+
+.info {
+  background: black;
+  width: 40vw;
+  height: 40vh;
+  color: white;
+  margin-top: 0.9rem;
+}
+
+.info > span {
+  color: rgba(182, 182, 182, 0.9);
+}
+
+.info > span > em {
+  color: rgb(255, 255, 255);
+  /* opacity: 1; */
+  font-weight: bold;
+}
+
+/* .project-details {
+  display: flex;
+} */
