@@ -6,7 +6,8 @@
 
 #projects {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 90%;
 }
 
 .project {

@@ -46,14 +46,14 @@ body {
   font-family: 'Kelvetica Nobis';
   font-size: 16px;
   letter-spacing: 0.1rem;
-  width: 100%;
 }
 
 a {
   text-decoration: none;
   color: #000000;
   opacity: 0.95;
-  font-size: 1.2rem;
+  font-size: 0.7rem;
+  font-weight: 100;
 }
 
 a:hover, a:active {
@@ -62,7 +62,10 @@ a:hover, a:active {
 
 #logo {
   font-family: 'Electramaniacal', Arial, Helvetica, sans-serif;
-  /* font-size: 8rem; */
+  font-size: 4rem;
+  height: 0;
+  top: 0;
+  margin-bottom: 1rem;
 }
 
 .bright-text {
