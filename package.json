@@ -2,7 +2,7 @@
   "name": "ceremony",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo -- test to be included --"
   },
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/jayoharedee/ceremony/issues"
   },
-  "homepage": "https://github.com/jayoharedee/ceremony#readme"
+  "homepage": "https://github.com/jayoharedee/ceremony#readme",
+  "devDependencies": {
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
 }
