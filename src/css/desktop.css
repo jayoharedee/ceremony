@@ -36,7 +36,7 @@
 
 .project-img {
   width: 40vw;
-  height: 65vh;
+  height: 100%;
   /* margin: 4rem 3rem; */
   /* flex: 1; */
 }
@@ -51,8 +51,8 @@ main, .project:hover > section.project-info > * {
 
 #projects section.project-info {
   position: absolute;
-  bottom: 28px;
-  right: -9px;
+  bottom: 25px;
+  right: 8px;
   background-color: black;
   height: 30%;
   overflow: hidden;
