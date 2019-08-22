@@ -22,6 +22,6 @@ before_install:
 
 deploy:
   provider: script
-  script: now public --token=$NOW_TOKEN
+  script: bash scripts/deploy.sh
   skip_cleanup: true
   # app: $PACKAGE_NAME
