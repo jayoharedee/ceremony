@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import fonts from '../css/fonts.css';
 import style from '../css/style.css';
 import desktop from '../css/desktop.css';
