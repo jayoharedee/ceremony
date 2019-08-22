@@ -1,5 +1,5 @@
 {
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "prettier"],
     "env": {
       "browser": true,
       "node": true,
@@ -16,6 +16,6 @@
       "no-dupe-keys": "error",
       "consistent-return": "error",
       "no-multi-spaces": "error",
-      "semi": "error"
+      "semi": "off"
     }
   }
