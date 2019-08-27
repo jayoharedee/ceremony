@@ -1,11 +1,16 @@
-/* eslint-disable no-unused-vars */
-import fonts from '../css/fonts.css'
-import style from '../css/style.css'
-import desktop from '../css/desktop.css'
+import React from 'react'
+import { render } from 'react-dom'
 
-const arr = [1, 2, 3]
-const iAmJavascriptES6 = () => console.log(...arr)
-console.log(iAmJavascriptES6())
+import App from './components/App'
+
+import '../css/fonts.css'
+import '../css/style.css'
+import '../css/desktop.css'
+
+
+render(<App />, document.getElementById('app'))
+
+module.hot.accept();
 // function component() {
 //     const element = document.createElement('div');
 
