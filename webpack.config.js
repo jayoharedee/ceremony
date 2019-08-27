@@ -14,10 +14,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
@@ -28,14 +28,14 @@ module.exports = {
           loader: 'eslint-loader',
           options: {
             configFile: path.resolve(__dirname, '.eslintrc')
-          },
+          }
         }
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
             options: { minimize: true }
           }
         ]
@@ -46,7 +46,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { url: true, sourceMap: devMode } },
           { loader: 'sass-loader', options: { sourceMap: devMode } }
-        ],
+        ]
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -69,18 +69,21 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
   devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin({
-      filename: "style.css"
+      filename: 'style.css'
     }),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: './src/index.html',
+      filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     })
   ]
-};
+}
