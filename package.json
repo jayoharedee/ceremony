@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jayoharedee/ceremony#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
@@ -52,6 +53,7 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "@loadable/component": "^5.10.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }
