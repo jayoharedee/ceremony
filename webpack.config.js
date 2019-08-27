@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -74,6 +75,7 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin({
       filename: 'style.css'
     }),
@@ -85,5 +87,9 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css'
     })
-  ]
+  ],
+  devServer: {
+    contentBase: './public',
+    hot: true
+  }
 }
