@@ -61,7 +61,7 @@ a:hover, a:active {
 }
 
 #logo {
-  font-family: 'Electramaniacal', Arial, Helvetica, sans-serif;
+  /* font-family: 'Electramaniacal', Arial, Helvetica, sans-serif; */
   font-size: 8rem;
   text-decoration: none;
 }
