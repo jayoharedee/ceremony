@@ -54,6 +54,9 @@
   },
   "dependencies": {
     "@loadable/component": "^5.10.2",
+    "axios": "^0.19.0",
+    "json-server": "^0.15.0",
+    "lodash.isequal": "^4.5.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }
