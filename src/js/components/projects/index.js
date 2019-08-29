@@ -10,7 +10,7 @@ import ProjectItem from './project-item'
 // export to seperate file
 const config = {
   method: 'get',
-  pathname: '/projects'
+  url: '/projects'
 }
 
 const Projects = () => (

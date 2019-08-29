@@ -12,15 +12,11 @@ class Axios extends React.Component {
   }
 
   axiosRequest() {
-    const {
-      call: { pathname, method }
-    } = this.props
-
     const resource = {
-      url: `${this.baseURI}${pathname}`,
-      method,
-      baseURL: `${this.baseURI}/`,
+      baseURL: `${this.baseURI}`,
+      ...this.props.call
     }
+
     // Reset the request
     this.value = null
     this.forceUpdate()
