@@ -6,7 +6,8 @@ class Axios extends React.Component {
   constructor(props) {
     super(props)
 
-    this.baseURI = 'http://localhost:4000'
+    const isDev = process.env.NODE_ENV !== "production"
+    this.baseURI = isDev ? 'http://localhost:4000' : ''
     this.axiosContext = React.createContext(this.value)
   }
 
@@ -17,7 +18,8 @@ class Axios extends React.Component {
 
     const resource = {
       url: `${this.baseURI}${pathname}`,
-      method
+      method,
+      baseURL: `${this.baseURI}/`,
     }
     // Reset the request
     this.value = null
