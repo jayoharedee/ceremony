@@ -2,12 +2,12 @@ import React from 'react'
 
 import './style.scss'
 
-// populate projects with API call for data
-// import { projects } from './data'
 import Request from '../../services/api/provider/Request'
-// change this for network call
+import CircleSpinner from '../spinners/circle'
+import ErrorMessage from '../errormessage'
 import ProjectItem from './project-item'
 
+// export to seperate file
 const config = {
   method: 'get',
   pathname: '/projects'
@@ -16,15 +16,17 @@ const config = {
 const Projects = () => (
   <Request call={config}>
     {response => {
-      if (response instanceof Error) {
-        return <div>{response.message}</div>
-      }
-
       if (!response) {
-        return <div>loading ...</div>
+        return <CircleSpinner />
       }
 
-      const projects = response.data
+      const { message, data } = response
+
+      if (response instanceof Error) {
+        return <ErrorMessage message={message} />
+      }
+
+      const projects = data
 
       return (
         <main id="projects" role="main">
