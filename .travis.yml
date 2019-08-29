@@ -20,6 +20,11 @@ before_install:
 #   - yarn test
 #   - yarn build
 
+#safelist
+branches:
+  only:
+  - master
+
 deploy:
   provider: script
   script: bash scripts/deploy.sh
