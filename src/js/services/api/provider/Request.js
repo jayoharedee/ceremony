@@ -6,8 +6,6 @@ class Axios extends React.Component {
   constructor(props) {
     super(props)
 
-    // NOTE: Do not use this.context as React uses it internally
-    // TODO: make sure node_env is used
     this.baseURI = 'http://localhost:4000'
     this.axiosContext = React.createContext(this.value)
   }
