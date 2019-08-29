@@ -7,18 +7,26 @@ class Axios extends React.Component {
     super(props)
 
     // NOTE: Do not use this.context as React uses it internally
+    // TODO: make sure node_env is used
+    this.baseURI = 'http://localhost:4000'
     this.axiosContext = React.createContext(this.value)
   }
 
   axiosRequest() {
-    const { config } = this.props
+    const {
+      call: { pathname, method }
+    } = this.props
 
+    const resource = {
+      url: `${this.baseURI}${pathname}`,
+      method
+    }
     // Reset the request
     this.value = null
     this.forceUpdate()
 
     axios
-      .request(config)
+      .request(resource)
       .then(response => {
         this.value = response
         this.forceUpdate()
@@ -34,7 +42,7 @@ class Axios extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (!isEqual(this.props.config, prevProps.config)) {
+    if (!isEqual(this.props.call, prevProps.call)) {
       this.axiosRequest()
     }
   }
