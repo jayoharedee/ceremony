@@ -2,7 +2,7 @@ import * as React from 'react'
 import axios from 'axios'
 import isEqual from 'lodash.isequal'
 
-class Axios extends React.Component {
+class Request extends React.Component {
   constructor(props) {
     super(props)
 
@@ -56,4 +56,4 @@ class Axios extends React.Component {
   }
 }
 
-export default Axios
+export default Request
