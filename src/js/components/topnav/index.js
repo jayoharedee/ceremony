@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './topnav.scss'
 
 const TopNav = () => (
   <nav id="nav-menu">
-    <a href="#projects">PROJECTS</a>
-    <a href="#services">SERVICES</a>
-    <a href="#logo" id="logo">
+    <Link to="/">PROJECTS</Link>
+    <Link to="/services">SERVICES</Link>
+    <Link to="/logo" id="logo">
       Ceremony
-    </a>
-    <a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
+    </Link>
+    <Link to="/about">ABOUT</Link>
+    <Link to="/contact">CONTACT</Link>
   </nav>
 )
 
