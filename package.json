@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --mode development --open",
     "dev": "webpack --mode development --module-bind js=babel-loader",
     "build": "webpack --mode production --module-bind js=babel-loader",
-    "mock:api": "./node_modules/.bin/json-server --watch ./src/js/services/api/mockDb.json --port 4000"
+    "mock:api": "./node_modules/.bin/json-server --watch ./src/js/services/api/mockDb.json --port 4000 & npm run start"
   },
   "repository": {
     "type": "git",
